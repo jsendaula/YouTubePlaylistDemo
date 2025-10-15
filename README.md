@@ -11,5 +11,6 @@ Enable the YouTube Data API v3.
 Go to APIs & Services → Credentials → Create Credentials → OAuth client ID.  
 Choose Desktop app.  
 Download the client_secret.json file and save it in your project folder.
+Add yourself as a user [Audience](https://console.cloud.google.com/auth/audience) 
 ### Install the required Python libraries
 `pip install google-auth-oauthlib google-auth-httplib2 google-api-python-client`
