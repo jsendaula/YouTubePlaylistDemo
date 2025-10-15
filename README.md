@@ -4,7 +4,7 @@ Python Project using ChatGPT to manage playlists on YouTube
 ## PREREQUISITES
     
 ### Create a Google Cloud project
-Go to [Google Cloud Console](https://chatgpt.com/c/68e9f65b-57cc-832e-95c1-54bc6bfa9267#:~:text=Go%20to%20Google-,Cloud,-Console).  
+Go to [Google Cloud Console](https://console.cloud.google.com/).  
 Create a new project (or select one).  
 Enable the YouTube Data API v3.  
 ### Create OAuth 2.0 credentials
