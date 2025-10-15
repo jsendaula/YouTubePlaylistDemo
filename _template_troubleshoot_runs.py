@@ -182,29 +182,7 @@ if __name__ == "__main__":
 
     # ---- Video list ----
     video_links = [
-        # "https://www.youtube.com/watch?v=sFVVlzc1-HA&list=WL&index=165&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=sHqTmgpBzBQ&list=WL&index=168&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=4WSTEfpVaD8&list=WL&index=176&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=LILai5jIW1w&list=WL&index=179&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=zLGthxUe2jc&list=WL&index=180&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=zLGthxUe2jc&list=WL&index=180&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=Dzl5Prukffs&list=WL&index=194&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=uxooPaQEo1o&list=WL&index=195&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=qJtLZvhq-UQ&list=WL&index=196&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=Bp-tLifretc&list=WL&index=197&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=CKU8y9hadK8&list=WL&index=198&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=cVmlUI9N7Kk&list=WL&index=200&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=ipd85hGJHxs&list=WL&index=201&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=Jxq_nYOEn-4&list=WL&index=202&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=_sA5xWraeu0&list=WL&index=211&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=JA8h8YF60xQ&list=WL&index=212&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=5az4zm5gONo&list=WL&index=215&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=xMizl6_QY8Y&list=WL&index=240&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=k1S-Nx_4Vtk&list=WL&index=241&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=w6pOSYxr3C0&list=WL&index=242&pp=gAQBiAQB0gcJCfwJAYcqIYzv",
-        # "https://www.youtube.com/watch?v=cbnzrNWsjPM&list=WL&index=243&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=zsscllN-6jU&list=WL&index=273&pp=gAQBiAQB",
-        # "https://www.youtube.com/watch?v=XdGvGoHONOA&list=WL&index=274&pp=gAQBiAQB0gcJCfwJAYcqIYzv",
+        "",
     ]
 
     # Step 1: Check if playlist already exists ----- NEW
