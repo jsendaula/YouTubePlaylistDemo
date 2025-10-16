@@ -1,1 +1,37 @@
+# Secrets
 *.json
+
+# IDE-specific files and directories
+.idea/
+.vscode/
+*.swp
+*.bak
+*.swo
+
+# Build artifacts
+build/
+dist/
+target/
+*.class
+*.o
+*.pyc
+*.exe
+*.dll
+*.so
+
+# Dependency directories
+node_modules/
+vendor/
+
+# Log files
+*.log
+logs/
+
+# Environment variables and sensitive data
+.env
+.env.*
+config.local.php
+
+# Operating System generated files
+.DS_Store
+Thumbs.db
