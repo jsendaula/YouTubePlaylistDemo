@@ -9,7 +9,7 @@ SCOPES = ["https://www.googleapis.com/auth/youtube"]
 
 def authenticate_youtube():
     """Authenticate and return an authorized YouTube API client."""
-    flow = InstalledAppFlow.from_client_secrets_file("client_secret_866882421599-qch50psmt5uhj02du0g5nfucgvo4rqin.apps.googleusercontent.com.json", SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file("------------.json", SCOPES)
     creds = flow.run_local_server(port=0)
     youtube = build("youtube", "v3", credentials=creds)
     return youtube
