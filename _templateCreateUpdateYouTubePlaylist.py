@@ -176,14 +176,19 @@ if __name__ == "__main__":
     youtube = authenticate_youtube()
 
     # ---- Playlist details ----
-    title = "My Initial Playlist (No Duplicates)"
-    description = "A playlist created via Python, skipping duplicates automatically."
+    title = "Air Demo Update 001"
+    description = "Automatically managed playlist via Python created with the assistance of ChatGPT."
     privacy = "private"
 
     # ---- Video list ----
     video_links = [
         ############################################################################### 2025xxxx
-        "https://www.youtube.com/watch?v=h8htSF9X5sE",
+        "https://www.youtube.com/watch?v=h8htSF9X5sE&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=1&pp=gAQBiAQB8AUB",
+        "https://www.youtube.com/watch?v=j7MU2PMC160&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=2&pp=gAQBiAQB8AUB",
+        "https://www.youtube.com/watch?v=bQHyBxwYsyk&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=3&pp=gAQBiAQB8AUB",
+        "https://www.youtube.com/watch?v=V5n39OKPB_o&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=4&pp=gAQBiAQB8AUB",
+        "https://www.youtube.com/watch?v=V5n39OKPB_o&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=4&pp=gAQBiAQB8AUB",# duplicate
+        "https://www.youtube.com/watch?v=mMGhYq4H4eE",
     ]
 
     # Step 1: Check if playlist already exists ----- NEW
