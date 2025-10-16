@@ -9,7 +9,7 @@ SCOPES = ["https://www.googleapis.com/auth/youtube"]
 
 def authenticate_youtube():
     """Authenticate and return an authorized YouTube API client."""
-    flow = InstalledAppFlow.from_client_secrets_file("-------------", SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file("client_secret_897398147357-i5hdois41qobv01lmfhgg14suh02s9fg.apps.googleusercontent.com.json", SCOPES)
     creds = flow.run_local_server(port=0)
     youtube = build("youtube", "v3", credentials=creds)
     return youtube
@@ -176,7 +176,7 @@ if __name__ == "__main__":
     youtube = authenticate_youtube()
 
     # ---- Playlist details ----
-    title = "Air Demo Update 001"
+    title = "Air Demo Update 002"
     description = "Automatically managed playlist via Python created with the assistance of ChatGPT."
     privacy = "private"
 
@@ -185,10 +185,12 @@ if __name__ == "__main__":
         ############################################################################### 2025xxxx
         "https://www.youtube.com/watch?v=h8htSF9X5sE&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=1&pp=gAQBiAQB8AUB",
         "https://www.youtube.com/watch?v=j7MU2PMC160&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=2&pp=gAQBiAQB8AUB",
+        "https://www.youtube.com/watch?v=j7MU2PMC160&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=2&pp=gAQBiAQB8AUB",# duplicate
         "https://www.youtube.com/watch?v=bQHyBxwYsyk&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=3&pp=gAQBiAQB8AUB",
         "https://www.youtube.com/watch?v=V5n39OKPB_o&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=4&pp=gAQBiAQB8AUB",
         "https://www.youtube.com/watch?v=V5n39OKPB_o&list=PLq9NE85nTBB0TCs7o8MMweQrrMONAA_IA&index=4&pp=gAQBiAQB8AUB",# duplicate
         "https://www.youtube.com/watch?v=mMGhYq4H4eE",
+        "https://www.youtube.com/watch?v=BMRQK9yc5vY&list=PLRp7y0-zdXyW3zbyxbEjbW-rDw4i_Wtil&index=93&pp=gAQBiAQB8AUB",
     ]
 
     # Step 1: Check if playlist already exists ----- NEW
