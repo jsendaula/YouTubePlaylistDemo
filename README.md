@@ -1,16 +1,25 @@
-# YouTubePlaylist
-Python Project using ChatGPT to manage playlists on YouTube
+# 🎬 YouTube Playlist Creator / Updater (Python)
 
-## PREREQUISITES
-    
-### Create a Google Cloud project
-Go to [Google Cloud Console](https://console.cloud.google.com/).  
-Create a new project (or select one).  
-Enable the YouTube Data API v3.  
-### Create OAuth 2.0 credentials
-Go to APIs & Services → Credentials → Create Credentials → OAuth client ID.  
-Choose Desktop app.  
-Download the client_secret.json file and save it in your project folder.
-Add yourself as a user [Audience](https://console.cloud.google.com/auth/audience) 
-### Install the required Python libraries
-`pip install google-auth-oauthlib google-auth-httplib2 google-api-python-client`
+A simple Python tool that can:
+- Create or update a YouTube playlist.
+- Add new videos from a list of URLs or video IDs.
+- Automatically skip duplicates (both in the input and the playlist).
+
+---
+
+## 🚀 How to Use
+
+### 1. Prerequisites
+- Python 3.8+
+- A Google account with a YouTube channel.
+
+### 2. Enable YouTube Data API
+1. Go to [Google Cloud Console](https://console.cloud.google.com/).
+2. Create a new project.
+3. Enable **YouTube Data API v3**.
+4. Create **OAuth client ID** credentials (type: *Desktop App*).
+5. Download your credentials file and save it as **`client_secret.json`** in this folder.
+
+### 3. Install dependencies
+```bash
+pip install -r requirements.txt
