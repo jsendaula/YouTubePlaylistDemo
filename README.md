@@ -23,3 +23,16 @@ A simple Python tool that can:
 ### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
+```
+
+### 4. Customization : Edit these lines in the script to change playlist details or video list:
+```
+title = "My YouTube Playlist"
+description = "Managed automatically with Python!"
+privacy = "unlisted"
+
+video_links = [
+    "https://www.youtube.com/watch?v=VIDEO_ID_1",
+    "https://www.youtube.com/watch?v=VIDEO_ID_2",
+]
+```
