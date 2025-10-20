@@ -36,3 +36,5 @@ video_links = [
     "https://www.youtube.com/watch?v=VIDEO_ID_2",
 ]
 ```
+### Original ChatGPT working session
+[Iterative working conversation](https://chatgpt.com/share/68f57dfb-5330-8005-8559-f2670df6a400)
