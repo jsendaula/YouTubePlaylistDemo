@@ -4,18 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be0ca5f1-94db-4f64-8cbe-5de68f75b54b" name="Changes" comment="test commit 1" />
+    <list default="true" id="be0ca5f1-94db-4f64-8cbe-5de68f75b54b" name="Changes" comment="test commit 1">
+      <change afterPath="$PROJECT_DIR$/list_youTube_channel_videos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_or_update_youtube_playlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_or_update_youtube_playlist.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python._templateCreateUpdateYouTubePlaylist.executor": "Run"
+    "Python._templateCreateUpdateYouTubePlaylist.executor": "Run",
+    "Python.create_or_update_youtube_playlist.executor": "Run",
+    "git-widget-placeholder": "20251022__DemoUpdatesBranch",
+    "last_opened_file_path": "/Users/jasonsendaula/PycharmProjects/YouTubePlaylistDemo"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="TaskManager">
     <servers />
   </component>

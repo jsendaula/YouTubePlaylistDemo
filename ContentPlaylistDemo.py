@@ -2,7 +2,6 @@ import time
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
 import re
 
 # YouTube Data API scope
@@ -10,7 +9,7 @@ SCOPES = ["https://www.googleapis.com/auth/youtube"]
 
 def authenticate_youtube():
     """Authenticate and return an authorized YouTube API client."""
-    flow = InstalledAppFlow.from_client_secrets_file("------------.json", SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file("-------.json", SCOPES)
     creds = flow.run_local_server(port=0)
     youtube = build("youtube", "v3", credentials=creds)
     return youtube
@@ -177,7 +176,7 @@ if __name__ == "__main__":
     youtube = authenticate_youtube()
 
     # ---- Playlist details ----
-    title = "My Playlist (No Duplicates) - SPORTY 20251022 - 001 EC"
+    title = "My Playlist (No Duplicates) - Comcast Business 001"
     description = "A playlist created via Python, skipping duplicates automatically."
     privacy = "private"
 
@@ -185,33 +184,33 @@ if __name__ == "__main__":
     video_links = [
         ############################################################################### 2025xxxx
         "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=68gg6fL4dGg&list=WL&index=145&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=3h5MbfQ32LU&list=WL&index=142&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=g5Pynz1bxdE&list=WL&index=119&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=3JIr3QOGo1Y&list=WL&index=93&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=LDhjXGdtgtk&list=WL&index=89&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=D7biRu2Roi8&list=WL&index=33&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=-nxW_d-5g-o&list=WL&index=25&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB"  # duplicate
-        "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=68gg6fL4dGg&list=WL&index=145&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=3h5MbfQ32LU&list=WL&index=142&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=g5Pynz1bxdE&list=WL&index=119&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=3JIr3QOGo1Y&list=WL&index=93&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=LDhjXGdtgtk&list=WL&index=89&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=D7biRu2Roi8&list=WL&index=33&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=-nxW_d-5g-o&list=WL&index=25&pp=gAQBiAQB",
-        "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB"  # duplicate
-        # "",
-        # "",
-        # "",
-        # "",
-        # "",
-        # "",
-        # "",
-        # "",
-        # "",
-        # "",
+        "EanwSh4LD5E",
+        "xZEL3Pi4uYE",
+        "XFxhvkOLw",
+        "slJeUiybFQA",
+        "IUUHt8RINLY",
+        "Lp7_eTESC0Y",
+        "00rG4E1e1Qg",
+        "8es1FC8_wVE",
+        "dhJlDF9Hl28",
+        "W1lire7n1w0",
+        "S9QmMvgF0TI",
+        "FP5cHqkGxWU",
+        "jzGR0OuAYYQ",
+        "9gMdiYRhaf4",
+        "6YM0vEmgCyI",
+        "Smr_8Czc7MI",
+        "dyP-eFDNTRo",
+        # "https://www.youtube.com/watch?v=sFVVlzc1-HA&list=WL&index=165&pp=gAQBiAQB", # -- error causing line, account deleted --
+        "5tQ9ySeDdMA",
+        "7C2dw1cWZVU",
+        "LBnLA4qvE_0",
+        "fdflYG5mAhQ",
+        "D4fZoplu8Cg",
+        "H9b8H-B8V-w",
+        "OA93bn3eUsI",
+        "F44zfIpmqLU",
+        "F44zfIpmqLU",  # ---Duplicate line
     ]
 
     # Step 1: Check if playlist already exists ----- NEW
@@ -223,12 +222,3 @@ if __name__ == "__main__":
 
     # Step 3: Add videos (skip duplicates) ----- pre-existing
     add_videos_no_duplicates(youtube, playlist_id, video_links)
-
-    try:
-        # Your Google API call here
-        service.resource().method().execute()
-    except HttpError as error:
-        print(f"An API error occurred: {error}")
-        # Handle the specific error, e.g., retry or log details
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
