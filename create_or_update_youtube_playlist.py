@@ -9,10 +9,37 @@ SCOPES = ["https://www.googleapis.com/auth/youtube"]
 
 def authenticate_youtube():
     """Authenticate and return an authorized YouTube API client."""
-    flow = InstalledAppFlow.from_client_secrets_file("--------.json", SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file("client_secret_897398147357-i5hdois41qobv01lmfhgg14suh02s9fg.apps.googleusercontent.com.json", SCOPES)
     creds = flow.run_local_server(port=0)
     youtube = build("youtube", "v3", credentials=creds)
     return youtube
+
+# ---------------- Playlist Helpers ---------------- #
+
+def find_playlist_by_title(youtube, title):
+    """Return the playlist ID if a playlist with the given title exists."""
+    next_page_token = None
+    while True:
+        request = youtube.playlists().list(
+            part="snippet,contentDetails",
+            mine=True,
+            maxResults=50,
+            pageToken=next_page_token,
+        )
+        response = request.execute()
+
+        for playlist in response.get("items", []):
+            if playlist["snippet"]["title"].lower() == title.lower():
+                print(f"✅ Found existing playlist: {title}")
+                print(f"🔗 URL: https://www.youtube.com/playlist?list={playlist['id']}")
+                return playlist["id"]
+
+        next_page_token = response.get("nextPageToken")
+        if not next_page_token:
+            break
+
+    print(f"ℹ️ No existing playlist found with title: {title}")
+    return None
 
 def create_playlist(youtube, title, description, privacy="public"):
     """Create a YouTube playlist."""
@@ -28,6 +55,8 @@ def create_playlist(youtube, title, description, privacy="public"):
     print(f"✅ Playlist created: {title}")
     print(f"🔗 URL: https://www.youtube.com/playlist?list={playlist_id}")
     return playlist_id
+
+# ---------------- Video Helpers ---------------- #
 
 def extract_video_id(url_or_id):
     """Extract video ID from YouTube URL or return ID directly."""
@@ -77,9 +106,14 @@ def add_video_to_playlist(youtube, playlist_id, video_id):
             }
         }
     )
-    response = request.execute()
+    """old code"""
+    # response = request.execute()
+    """new code"""
+    request.execute()
     time.sleep(2)
     print(f"🎵 Added video: {video_id}")
+
+# ---------------- Duplicate Handling ---------------- #
 
 def deduplicate_links(video_links):
     """Remove duplicates within the provided list itself."""
@@ -129,18 +163,26 @@ def add_videos_no_duplicates(youtube, playlist_id, video_links):
         add_video_to_playlist(youtube, playlist_id, video_id)
         added_count += 1
 
-    print(f"\n✅ Done! Added {added_count} new videos, skipped {skipped_count} duplicates.")
+    """old code"""
+    # print(f"\n✅ Done! Added {added_count} new videos, skipped {skipped_count} duplicates.")
+    """NEW code"""
+    print(f"\n✅ Summary:")
+    print(f"   ➕ Added {added_count} new videos")
+    print(f"   🚫 Skipped {skipped_count} duplicates (already in playlist)")
+
+# ---------------- Main Program ---------------- #
 
 if __name__ == "__main__":
     youtube = authenticate_youtube()
 
     # ---- Playlist details ----
-    title = "My Playlist (No Duplicates) SPORTY 99999"
+    title = "My Playlist (No Duplicates) - SPORTY 20251022 - 001"
     description = "A playlist created via Python, skipping duplicates automatically."
     privacy = "private"
 
     # ---- Video list ----
     video_links = [
+        ############################################################################### 2025xxxx
         "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB",
         "https://www.youtube.com/watch?v=68gg6fL4dGg&list=WL&index=145&pp=gAQBiAQB",
         "https://www.youtube.com/watch?v=3h5MbfQ32LU&list=WL&index=142&pp=gAQBiAQB",
@@ -150,7 +192,24 @@ if __name__ == "__main__":
         "https://www.youtube.com/watch?v=D7biRu2Roi8&list=WL&index=33&pp=gAQBiAQB",
         "https://www.youtube.com/watch?v=-nxW_d-5g-o&list=WL&index=25&pp=gAQBiAQB",
         "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB"  # duplicate
+        # "",
+        # "",
+        # "",
+        # "",
+        # "",
+        # "",
+        # "",
+        # "",
+        # "",
+        # "",
     ]
 
-    playlist_id = create_playlist(youtube, title, description, privacy)
+    # Step 1: Check if playlist already exists ----- NEW
+    playlist_id = find_playlist_by_title(youtube, title)
+
+    # Step 2: Create it if it doesn’t exist ----- pre-existing
+    if not playlist_id:
+        playlist_id = create_playlist(youtube, title, description, privacy)
+
+    # Step 3: Add videos (skip duplicates) ----- pre-existing
     add_videos_no_duplicates(youtube, playlist_id, video_links)

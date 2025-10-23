@@ -11,6 +11,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python._templateCreateUpdateYouTubePlaylist.executor": "Run"
+  }
+}]]></component>
   <component name="TaskManager">
     <servers />
   </component>
