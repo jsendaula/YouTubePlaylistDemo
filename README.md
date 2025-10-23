@@ -24,8 +24,9 @@ A simple Python tool that can:
 ```bash
 pip install -r requirements.txt
 ```
+### additionally : update Python Interpreter local version
 
-### 4. Customization : Edit these lines in the script to change playlist details or video list:
+### 5. Customization : Edit these lines in the script to change playlist details or video list:
 ```
 title = "My YouTube Playlist"
 description = "Managed automatically with Python!"

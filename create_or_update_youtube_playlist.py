@@ -193,6 +193,15 @@ if __name__ == "__main__":
         "https://www.youtube.com/watch?v=D7biRu2Roi8&list=WL&index=33&pp=gAQBiAQB",
         "https://www.youtube.com/watch?v=-nxW_d-5g-o&list=WL&index=25&pp=gAQBiAQB",
         "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB"  # duplicate
+        "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB",
+        "https://www.youtube.com/watch?v=68gg6fL4dGg&list=WL&index=145&pp=gAQBiAQB",
+        "https://www.youtube.com/watch?v=3h5MbfQ32LU&list=WL&index=142&pp=gAQBiAQB",
+        "https://www.youtube.com/watch?v=g5Pynz1bxdE&list=WL&index=119&pp=gAQBiAQB",
+        "https://www.youtube.com/watch?v=3JIr3QOGo1Y&list=WL&index=93&pp=gAQBiAQB",
+        "https://www.youtube.com/watch?v=LDhjXGdtgtk&list=WL&index=89&pp=gAQBiAQB",
+        "https://www.youtube.com/watch?v=D7biRu2Roi8&list=WL&index=33&pp=gAQBiAQB",
+        "https://www.youtube.com/watch?v=-nxW_d-5g-o&list=WL&index=25&pp=gAQBiAQB",
+        "https://www.youtube.com/watch?v=jjs0khcuCLY&list=WL&index=150&pp=gAQBiAQB"  # duplicate
         # "",
         # "",
         # "",
