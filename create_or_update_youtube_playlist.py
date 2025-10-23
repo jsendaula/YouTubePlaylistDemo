@@ -2,6 +2,7 @@ import time
 
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
+from googleapiclient.errors import HttpError
 import re
 
 # YouTube Data API scope
@@ -9,7 +10,7 @@ SCOPES = ["https://www.googleapis.com/auth/youtube"]
 
 def authenticate_youtube():
     """Authenticate and return an authorized YouTube API client."""
-    flow = InstalledAppFlow.from_client_secrets_file("-----.json", SCOPES)
+    flow = InstalledAppFlow.from_client_secrets_file("client_secret_897398147357-i5hdois41qobv01lmfhgg14suh02s9fg.apps.googleusercontent.com.json", SCOPES)
     creds = flow.run_local_server(port=0)
     youtube = build("youtube", "v3", credentials=creds)
     return youtube
@@ -176,7 +177,7 @@ if __name__ == "__main__":
     youtube = authenticate_youtube()
 
     # ---- Playlist details ----
-    title = "My Playlist (No Duplicates) - SPORTY 20251022 - 001"
+    title = "My Playlist (No Duplicates) - SPORTY 20251022 - 001 EC"
     description = "A playlist created via Python, skipping duplicates automatically."
     privacy = "private"
 
@@ -213,3 +214,12 @@ if __name__ == "__main__":
 
     # Step 3: Add videos (skip duplicates) ----- pre-existing
     add_videos_no_duplicates(youtube, playlist_id, video_links)
+
+    try:
+        # Your Google API call here
+        service.resource().method().execute()
+    except HttpError as error:
+        print(f"An API error occurred: {error}")
+        # Handle the specific error, e.g., retry or log details
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
